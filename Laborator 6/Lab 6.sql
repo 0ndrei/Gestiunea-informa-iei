@@ -25,7 +25,17 @@ ON angajati.ID_DEPARTAMENT = departamente.ID_DEPARTAMENT;*/
 -- SHOW INDEX FROM departamente;
 
 -- Ex 7
+-- a
+/*EXPLAIN SELECT NUME, SALARIUL
+FROM angajati
+WHERE SALARIUL>2850; */
 
+-- b
+-- CREATE NONCLUSTERED INDEX Idx_nume ON angajati(nume);  
+/*EXPLAIN NUME, angajati.ID_DEPARTAMENT, DENUMIRE_DEPARTAMENT
+FROM angajati INNER JOIN departamente
+ON angajati.ID_DEPARTAMENT = departamente.ID_DEPARTAMENT
+WHERE ID_ANGAJAT = 104; */
 
 -- Ex 8
 -- Ex 9
